@@ -9,6 +9,7 @@
         class="input-field__input input"
         :type="type"
         :placeholder="placeholder"
+        :disabled="disabled"
         :readonly="readonly"
         :value="value"
       />
@@ -44,6 +45,10 @@ defineProps({
     default: ''
   },
   readonly: {
+    type: Boolean,
+    default: false
+  },
+  disabled: {
     type: Boolean,
     default: false
   },
