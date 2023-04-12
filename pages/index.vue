@@ -6,7 +6,7 @@
           <LayoutWideSection
             class="settings-section__subsection"
             heading="Звонок через SIP"
-            :header-modifiers="['is-flex']"
+            is-flex-header
           >
             <template #header>
               <BaseSwitcher class="settings-section__switcher" is-thin />
@@ -16,6 +16,13 @@
                 Включите эту функцию чтобы Авито и другие площадки не блокировали ваш аккаунт. Будет выглядеть так, будто звонки совершаются с разных номеров.
               </p>
             </div>
+          </LayoutWideSection>
+          <LayoutWideSection
+            class="settings-section__subsection"
+            heading="Учётная запись"
+            is-mobile-hidden-header
+          >
+
           </LayoutWideSection>
         </div>
       </div>

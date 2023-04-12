@@ -1,6 +1,12 @@
 <template>
   <div class="wide-section">
-    <div class="wide-section__header" :class="headerModifiers">
+    <div
+      class="wide-section__header"
+      :class="{
+        'is-flex': isFlexHeader,
+        'is-mobile-hidden': isMobileHiddenHeader
+      }"
+    >
       <div v-if="heading" class="wide-section__heading">
         {{ heading }}
       </div>
@@ -18,9 +24,13 @@ defineProps({
     type: String,
     default: ''
   },
-  headerModifiers: {
-    type: Array,
-    default: () => []
+  isFlexHeader: {
+    type: Boolean,
+    default: false
+  },
+  isMobileHiddenHeader: {
+    type: Boolean,
+    default: false
   }
 })
 </script>
