@@ -16,7 +16,7 @@
 defineProps({
   heading: {
     type: String,
-    default: () => ''
+    default: ''
   },
   headerModifiers: {
     type: Array,
