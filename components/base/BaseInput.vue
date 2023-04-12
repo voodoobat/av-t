@@ -33,7 +33,7 @@ defineProps({
   },
   value: {
     type: String,
-    default: '',
+    default: ''
   },
   label: {
     type: String,
