@@ -1,9 +1,9 @@
 <template>
   <div>
     <PageIntro v-if="heading" :heading="heading" />
-    <BaseContainer class="padding-top-2">
+    <LayoutContainer class="padding-top-2">
       <slot />
-    </BaseContainer>
+    </LayoutContainer>
   </div>
 </template>
 
