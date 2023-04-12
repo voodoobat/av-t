@@ -56,10 +56,32 @@
               </div>
             </div>
           </LayoutWideSection>
+          <LayoutWideSection
+            class="settings-section__subsection"
+            heading="Оповещения о новых подборках"
+            is-mobile-hidden-header
+          >
+            <div class="post-entry">
+              <p class="is-muted">
+                Выберите, куда будут приходить уведомления при появлении автомобилей, которые подходят под критерии вашей подборки.
+              </p>
+            </div>
+            <div class="settings-section__fields">
+              <div class="settings-section__subcaption caption is-mobile-hidden">
+                Уведомления
+              </div>
+              <div class="settings-section__notifications">
+                <div class="settings-section__field is-flex">
+                  <BaseCheckbox label="Выкл" />
+                </div>
+                <div class="settings-section__field is-flex">
+                  <BaseCheckbox label="Push" disabled />
+                </div>
+              </div>
+            </div>
+          </LayoutWideSection>
         </div>
       </div>
     </PageContainer>
   </div>
 </template>
-<script setup>
-</script>
