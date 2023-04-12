@@ -22,7 +22,15 @@
             heading="Учётная запись"
             is-mobile-hidden-header
           >
-
+            <BaseInput
+              class="settings-section__field"
+              label="Компания"
+              value="foo bar"
+              readonly
+            />
+            <BaseInput class="settings-section__field" label="Фамилия">
+              <small class="settings-section__info">* Не обязательно</small>
+            </BaseInput>
           </LayoutWideSection>
         </div>
       </div>

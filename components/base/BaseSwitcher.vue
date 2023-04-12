@@ -1,19 +1,25 @@
 <template>
   <div class="switcher-label" :class="{ 'switcher-label--thin': isThin }">
-    <input :id="uid" type="checkbox" class="switcher-label__input" />
-    <label :for="uid" class="switcher-label__main"></label>
+    <input :id="id" type="checkbox" class="switcher-label__input" />
+    <label :for="id" class="switcher-label__main"></label>
   </div>
 </template>
 
 <script setup>
-import { v4 as uuid } from 'uuid'
+import { onMounted, ref } from 'vue'
+import { uid } from 'uid'
 
-const uid = uuid()
+const id = ref('')
+
 defineProps({
   isThin: {
     type: Boolean,
     default: false
   }
+})
+
+onMounted(() => {
+  id.value = uid()
 })
 </script>
 
