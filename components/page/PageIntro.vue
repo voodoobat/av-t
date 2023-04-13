@@ -14,7 +14,7 @@
 defineProps({
   heading: {
     type: String,
-    required: true
-  }
+    required: true,
+  },
 })
 </script>

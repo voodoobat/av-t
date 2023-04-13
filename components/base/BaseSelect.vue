@@ -31,12 +31,12 @@ import IconChevron from '@/assets/icons/chevron.svg?inline'
 const props = defineProps({
   value: {
     type: String,
-    default: ''
+    default: '',
   },
   options: {
     type: Array,
-    default: () => []
-  }
+    default: () => [],
+  },
 })
 
 const emit = defineEmits(['select'])

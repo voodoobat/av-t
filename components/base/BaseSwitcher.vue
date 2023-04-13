@@ -19,12 +19,12 @@ const id = ref('')
 defineProps({
   disabled: {
     type: Boolean,
-    default: false
+    default: false,
   },
   isThin: {
     type: Boolean,
-    default: false
-  }
+    default: false,
+  },
 })
 
 onMounted(() => {

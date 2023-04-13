@@ -3,5 +3,5 @@ import vTitle from 'vuejs-title'
 
 Vue.use(vTitle, {
   bgColor: '#2dc574',
-  fontSize: '1.2rem'
+  fontSize: '1.2rem',
 })

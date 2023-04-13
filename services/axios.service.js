@@ -12,7 +12,7 @@ export const axiosService = async (method, url, requestConfig) => {
       headers,
       url,
       method,
-      ...requestConfig
+      ...requestConfig,
     })
 
     return { data: response.data }

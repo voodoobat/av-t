@@ -8,5 +8,5 @@ export const inputTypes = [
   'datetime-local',
   'email',
   'hidden',
-  'password'
+  'password',
 ]

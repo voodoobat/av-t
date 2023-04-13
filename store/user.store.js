@@ -2,14 +2,14 @@ import cookie from 'cookie-universal'
 import { axiosService } from '~/services/axios.service'
 
 export const state = {
-  user: {}
+  user: {},
 }
 
 export const actions = {
-  async login ({ commit }, input) {
+  async login({ commit }, input) {
     const cookies = cookie()
     const { data, error } = await axiosService('post', 'login', {
-      data: input
+      data: input,
     })
 
     if (error) {
@@ -22,7 +22,7 @@ export const actions = {
     commit('SET_USER', data.user)
   },
 
-  async fetch ({ commit }) {
+  async fetch({ commit }) {
     const userId = cookie().get('user-id')
     const { data, error } = await axiosService('get', `user/${userId}`)
 
@@ -31,17 +31,15 @@ export const actions = {
     }
 
     commit('SET_USER', data)
-  }
+  },
 }
 
 export const mutations = {
-  SET_USER (state, payload) {
-    state.user = payload
-  }
+  SET_USER: (state, payload) => (state.user = payload),
 }
 
 export const getters = {
   isAuthorized: ({ user }) => {
     return !!user.id
-  }
+  },
 }

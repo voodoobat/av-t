@@ -10,8 +10,8 @@ import InfoIcon from '~/assets/icons/info.svg?inline'
 defineProps({
   message: {
     type: String,
-    required: true
-  }
+    required: true,
+  },
 })
 </script>
 

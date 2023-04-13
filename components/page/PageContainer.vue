@@ -11,7 +11,7 @@
 defineProps({
   heading: {
     type: String,
-    default: ''
-  }
+    default: '',
+  },
 })
 </script>

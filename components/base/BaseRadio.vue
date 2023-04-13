@@ -24,24 +24,24 @@ const id = ref('')
 defineProps({
   name: {
     type: String,
-    required: true
+    required: true,
   },
   value: {
     type: String,
-    default: ''
+    default: '',
   },
   label: {
     type: String,
-    default: ''
+    default: '',
   },
   checked: {
     type: Boolean,
-    default: false
+    default: false,
   },
   disabled: {
     type: Boolean,
-    default: false
-  }
+    default: false,
+  },
 })
 
 onMounted(() => {

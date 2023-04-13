@@ -17,7 +17,7 @@ import { reactive, useStore } from '@nuxtjs/composition-api'
 const store = useStore()
 const input = reactive({
   login: '',
-  password: ''
+  password: '',
 })
 
 const submit = () => store.dispatch('user.store/login', input)

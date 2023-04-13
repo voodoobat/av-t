@@ -4,7 +4,7 @@
       class="wide-section__header"
       :class="{
         'is-flex': isFlexHeader,
-        'is-mobile-hidden': isMobileHiddenHeader
+        'is-mobile-hidden': isMobileHiddenHeader,
       }"
     >
       <div v-if="heading" class="wide-section__heading">
@@ -22,15 +22,15 @@
 defineProps({
   heading: {
     type: String,
-    default: ''
+    default: '',
   },
   isFlexHeader: {
     type: Boolean,
-    default: false
+    default: false,
   },
   isMobileHiddenHeader: {
     type: Boolean,
-    default: false
-  }
+    default: false,
+  },
 })
 </script>

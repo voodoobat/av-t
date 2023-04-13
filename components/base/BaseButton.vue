@@ -12,21 +12,21 @@ import { computed } from 'vue'
 const props = defineProps({
   label: {
     type: String,
-    default: ''
+    default: '',
   },
   to: {
     type: String,
-    default: ''
+    default: '',
   },
   mods: {
     type: String,
-    default: ''
+    default: '',
   },
   type: {
     type: String,
     default: 'button',
-    validator: (v) => ['button', 'submit'].includes(v)
-  }
+    validator: (v) => ['button', 'submit'].includes(v),
+  },
 })
 
 const component = computed(() => (props.to ? 'nuxt-link' : 'button'))

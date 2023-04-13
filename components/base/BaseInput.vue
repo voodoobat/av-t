@@ -31,32 +31,32 @@ defineProps({
   type: {
     type: String,
     default: 'text',
-    validator: (v) => inputTypes.includes(v)
+    validator: (v) => inputTypes.includes(v),
   },
   value: {
     type: String,
-    default: ''
+    default: '',
   },
   label: {
     type: String,
-    default: ''
+    default: '',
   },
   placeholder: {
     type: String,
-    default: ''
+    default: '',
   },
   readonly: {
     type: Boolean,
-    default: false
+    default: false,
   },
   disabled: {
     type: Boolean,
-    default: false
+    default: false,
   },
   currency: {
     type: String,
-    default: ''
-  }
+    default: '',
+  },
 })
 
 const id = ref('')
