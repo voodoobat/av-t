@@ -23,9 +23,7 @@ export default {
   css: ['@/assets/css/global.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-    '~/plugins/vuejs-title.client.js'
-  ],
+  plugins: ['~/plugins/vuejs-title.client.js'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,

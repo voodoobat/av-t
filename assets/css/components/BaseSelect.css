@@ -16,7 +16,8 @@
 
 .select__options {
   position: absolute;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   background: #2dc574;
   color: white;

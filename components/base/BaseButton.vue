@@ -26,9 +26,9 @@ const props = defineProps({
     type: String,
     default: 'button',
     validator: (v) => ['button', 'submit'].includes(v)
-  },
+  }
 })
 
-const component = computed(() => props.to ? 'nuxt-link' : 'button')
+const component = computed(() => (props.to ? 'nuxt-link' : 'button'))
 const classes = computed(() => props.mods.split(' ').map((e) => `btn--${e}`))
 </script>

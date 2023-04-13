@@ -4,9 +4,7 @@ import { useStorage } from '~/services/useStorage'
 export const useAxios = async (method, url, requestConfig) => {
   const jwt = useStorage('x-user-token')
   const xApiKey = { 'X-Api-Key': process.env.API_KEY }
-  const headers = jwt
-    ? { 'X-User-Token': jwt, ...xApiKey }
-    : { ...xApiKey }
+  const headers = jwt ? { 'X-User-Token': jwt, ...xApiKey } : { ...xApiKey }
 
   try {
     const response = await axios.request({
@@ -14,7 +12,7 @@ export const useAxios = async (method, url, requestConfig) => {
       headers,
       url,
       method,
-      ...requestConfig,
+      ...requestConfig
     })
 
     return { data: response.data }

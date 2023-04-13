@@ -5,7 +5,7 @@ export const state = {
 }
 
 export const actions = {
-  async login ({ commit }, input) {
+  async login({ commit }, input) {
     const { data } = await useAxios('post', 'login', {
       data: input
     })

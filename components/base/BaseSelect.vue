@@ -62,4 +62,4 @@ onMounted(() => {
 })
 </script>
 
-<style scoped src="@/assets/css/components/BaseSelect.css">
+<style scoped src="@/assets/css/components/BaseSelect.css" />

@@ -1,7 +1,12 @@
 <template>
   <form class="login-form" @submit.prevent="submit">
     <BaseInput v-model="input.login" class="login-form__input" label="Логин" />
-    <BaseInput v-model="input.password" class="login-form__input" label="Пароль" type="password" />
+    <BaseInput
+      v-model="input.password"
+      class="login-form__input"
+      label="Пароль"
+      type="password"
+    />
     <BaseButton label="Войти" type="submit" mods="primary block" />
   </form>
 </template>
@@ -15,8 +20,7 @@ const input = reactive({
   password: ''
 })
 
-const submit = () =>
-  store.dispatch('user.store/login', input)
+const submit = () => store.dispatch('user.store/login', input)
 </script>
 
 <style scoped>

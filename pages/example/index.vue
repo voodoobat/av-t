@@ -12,7 +12,9 @@
           </template>
           <div class="post-entry">
             <p class="is-muted">
-              Включите эту функцию чтобы Авито и другие площадки не блокировали ваш аккаунт. Будет выглядеть так, будто звонки совершаются с разных номеров.
+              Включите эту функцию чтобы Авито и другие площадки не блокировали
+              ваш аккаунт. Будет выглядеть так, будто звонки совершаются с
+              разных номеров.
             </p>
           </div>
         </LayoutWideSection>
@@ -38,7 +40,8 @@
         >
           <div class="post-entry">
             <p class="is-muted">
-              Выберите, куда будут приходить уведомления при появлении автомобилей, которые подходят под критерии вашей подборки.
+              Выберите, куда будут приходить уведомления при появлении
+              автомобилей, которые подходят под критерии вашей подборки.
             </p>
           </div>
           <div class="settings-section__fields">
@@ -65,7 +68,8 @@
         >
           <div class="post-entry">
             <p class="is-muted">
-              Выберите, куда будут приходить уведомления при появлении автомобилей, которые подходят под критерии вашей подборки.
+              Выберите, куда будут приходить уведомления при появлении
+              автомобилей, которые подходят под критерии вашей подборки.
             </p>
           </div>
           <div class="settings-section__fields">
@@ -74,8 +78,12 @@
             </div>
             <div class="settings-section__notifications">
               <div class="settings-section__field is-flex">
-                <BaseCheckbox label="Автоматически переходить к новым объявлениям" />
-                <BaseInfoTooltip message="Neque numquam perspiciatis quos sequi sunt suscipit veniam voluptatem?" />
+                <BaseCheckbox
+                  label="Автоматически переходить к новым объявлениям"
+                />
+                <BaseInfoTooltip
+                  message="Neque numquam perspiciatis quos sequi sunt suscipit veniam voluptatem?"
+                />
               </div>
               <div class="settings-section__field is-flex">
                 <BaseCheckbox label="Push" disabled />
