@@ -28,8 +28,8 @@ defineProps({
 })
 
 onMounted(() => {
-  id.value = uid()
+  id.value = `_${uid()}`
 })
 </script>
 
-<style scoped src="@/assets/css/components/switcher.css" />
+<style scoped src="~/assets/css/components/BaseSwitcher.css" />

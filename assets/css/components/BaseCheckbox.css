@@ -108,3 +108,8 @@
   top:-.2rem;
   width:1.8rem
 }
+.checkbox-label__main::before,
+.checkbox-label__main::after {
+  top: 50% !important;
+  transform: translateY(-50%);
+}

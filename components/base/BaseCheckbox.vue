@@ -40,15 +40,8 @@ defineProps({
 })
 
 onMounted(() => {
-  id.value = uid()
+  id.value = `_${uid()}`
 })
 </script>
 
-<style scoped src="@/assets/css/components/checkbox.css" />
-<style scoped>
-.checkbox-label__main::before,
-.checkbox-label__main::after {
-  top: 50% !important;
-  transform: translateY(-50%);
-}
-</style>
+<style scoped src="~/assets/css/components/BaseCheckbox.css" />
