@@ -3,7 +3,9 @@
     <div class="select__input" @click="isOpen = !isOpen">
       <div class="input-field__input input">
         {{ selected }}
-        <div class="select__chevron" v-html="IconChevron" />
+        <div class="select__chevron">
+          <IconChevron />
+        </div>
       </div>
     </div>
     <div class="select__options-box">
@@ -24,7 +26,7 @@
 <script setup>
 import { uid } from 'uid'
 import { onMounted, ref } from 'vue'
-import IconChevron from '@/assets/icons/chevron.svg?raw'
+import IconChevron from '@/assets/icons/chevron.svg?inline'
 
 const props = defineProps({
   value: {
