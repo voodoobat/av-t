@@ -83,6 +83,7 @@
             </div>
           </div>
         </LayoutWideSection>
+        <BaseButton label="Сохранить" :mods="['primary']" />
       </div>
     </PageContainer>
   </div>
