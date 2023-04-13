@@ -1,6 +1,25 @@
 .select {
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
   z-index: 10;
+}
+
+.select__label {
+  margin: 0 !important;
+  font-size: 1.4rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.select__input {
+  flex-grow: 10;
+}
+
+.select__options-box {
+  position: relative;
 }
 
 .select__chevron {
@@ -8,10 +27,6 @@
   height: 1.8rem;
   color: #2dc574;
   transition: transform 0.3s ease;
-}
-
-.select__options-box {
-  position: relative;
 }
 
 .select__options {

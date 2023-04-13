@@ -1,5 +1,8 @@
 <template>
   <div :id="id" class="select" :class="{ 'is-active': isOpen }">
+    <div v-if="label" class="select__label" @click="isOpen = !isOpen">
+      {{ label }}
+    </div>
     <div class="select__input" @click="isOpen = !isOpen">
       <div class="input-field__input input">
         {{ selected }}
@@ -7,16 +10,16 @@
           <IconChevron />
         </div>
       </div>
-    </div>
-    <div class="select__options-box">
-      <div class="select__options">
-        <div
-          v-for="option in options"
-          :key="option"
-          class="select__option"
-          @click="select(option)"
-        >
-          {{ option }}
+      <div class="select__options-box">
+        <div class="select__options">
+          <div
+            v-for="option in options"
+            :key="option"
+            class="select__option"
+            @click="select(option)"
+          >
+            {{ option }}
+          </div>
         </div>
       </div>
     </div>
@@ -30,6 +33,10 @@ import IconChevron from '@/assets/icons/chevron.svg?inline'
 
 const props = defineProps({
   value: {
+    type: String,
+    default: '',
+  },
+  label: {
     type: String,
     default: '',
   },

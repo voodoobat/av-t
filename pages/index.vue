@@ -1,7 +1,7 @@
 <template>
   <PageContainer :heading="pageHeading">
     <UserLoginForm v-if="!isAuthorized" class="form" />
-    <div v-else>User</div>
+    <UserSettings v-else />
   </PageContainer>
 </template>
 
