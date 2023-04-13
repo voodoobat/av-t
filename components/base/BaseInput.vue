@@ -62,7 +62,7 @@ defineProps({
 const id = ref('')
 
 onMounted(() => {
-  id.value = uid()
+  id.value = `_${uid()}`
 })
 </script>
 
