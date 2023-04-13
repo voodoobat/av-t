@@ -7,20 +7,30 @@ export const state = {
 
 export const actions = {
   async login ({ commit }, input) {
+    const cookies = cookie()
     const { data, error } = await axiosService('post', 'login', {
       data: input
     })
 
     if (error) {
-      console.error(error)
+      return console.error(error)
     }
 
-    cookie().set('x-user-token', data.token)
+    cookies.set('user-id', data.user.id)
+    cookies.set('x-user-token', data.token)
+
     commit('SET_USER', data.user)
   },
 
   async fetch ({ commit }) {
-    // const { data, error } = await axiosService('get', )
+    const userId = cookie().get('user-id')
+    const { data, error } = await axiosService('get', `user/${userId}`)
+
+    if (error) {
+      return console.error(error)
+    }
+
+    commit('SET_USER', data)
   }
 }
 
@@ -30,4 +40,8 @@ export const mutations = {
   }
 }
 
-export const getters = {}
+export const getters = {
+  isAuthorized: ({ user }) => {
+    return !!user.id
+  }
+}
