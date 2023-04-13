@@ -7,12 +7,12 @@
       <input
         :id="id"
         class="input-field__input input"
+        :value="value"
         :type="type"
         :placeholder="placeholder"
         :disabled="disabled"
         :readonly="readonly"
-        v-bind:value="value"
-        v-on:input="$emit('input', $event.target.value)"
+        @input="$emit('input', $event.target.value)"
       />
       <div v-if="currency" class="extra-field__currency">
         {{ currency }}

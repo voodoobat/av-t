@@ -1,8 +1,8 @@
 import axios from 'axios'
-import { useStorage } from '~/services/useStorage'
+import cookie from 'cookie-universal'
 
-export const useAxios = async (method, url, requestConfig) => {
-  const jwt = useStorage('x-user-token')
+export const axiosService = async (method, url, requestConfig) => {
+  const jwt = cookie().get('x-user-token')
   const xApiKey = { 'X-Api-Key': process.env.API_KEY }
   const headers = jwt ? { 'X-User-Token': jwt, ...xApiKey } : { ...xApiKey }
 
