@@ -1,18 +1,16 @@
 <template>
   <div class="checkbox-label has-tooltip">
-    <div class="checkbox-label__box">
-      <input
-        :id="id"
-        type="checkbox"
-        class="checkbox-label__input"
-        :value="value"
-        :checked="checked"
-        :disabled="disabled"
-      />
-      <label :for="id" class="checkbox-label__main">
-        {{ label }}
-      </label>
-    </div>
+    <input
+      :id="id"
+      type="checkbox"
+      class="checkbox-label__input"
+      :value="value"
+      :checked="checked"
+      :disabled="disabled"
+    />
+    <label :for="id" class="checkbox-label__main">
+      {{ label }}
+    </label>
   </div>
 </template>
 
@@ -48,7 +46,9 @@ onMounted(() => {
 
 <style scoped src="@/assets/css/components/checkbox.css" />
 <style scoped>
-.checkbox-label__box {
-  display: flex;
+.checkbox-label__main::before,
+.checkbox-label__main::after {
+  top: 50% !important;
+  transform: translateY(-50%);
 }
 </style>
