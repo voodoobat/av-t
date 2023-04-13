@@ -1,0 +1,60 @@
+.select {
+  position: relative;
+  z-index: 10;
+}
+
+.select__chevron {
+  width: 1.8rem;
+  height: 1.8rem;
+  color: #2dc574;
+  transition: transform 0.3s ease;
+}
+
+.select__options-box {
+  position: relative;
+}
+
+.select__options {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  background: #2dc574;
+  color: white;
+  border-radius: 0.3rem;
+  opacity: 0;
+  transform: scale(0.9);
+  overflow: hidden;
+  pointer-events: none;
+  transition: all 0.4s ease;
+}
+
+.select__option {
+  padding: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.select__option.is-active,
+.select__option:hover {
+  background: #26a763;
+}
+
+.input {
+  display: flex;
+  justify-content: space-between;
+  min-height: 3.6rem;
+  transition: border-color 0.3s ease;
+}
+
+.select.is-active .select__options {
+  opacity: 1;
+  transform: none;
+  pointer-events: all;
+}
+
+.select.is-active .select__chevron {
+  transform: rotate(180deg);
+}
+
+.select.is-active .input {
+  border-color: #2dc574;
+}

@@ -1,6 +1,6 @@
 <template>
   <div class="input-field">
-    <label class="input-field__label caption" :for="id">
+    <label v-if="label" class="input-field__label caption" :for="id">
       {{ label }}
     </label>
     <div class="input-field__main">

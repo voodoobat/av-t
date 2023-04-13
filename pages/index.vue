@@ -55,6 +55,9 @@
             </div>
           </div>
         </LayoutWideSection>
+        <LayoutWideSection>
+          <BaseSelect value="Selected" :options="['foo', 'bar', 'baz']" />
+        </LayoutWideSection>
         <LayoutWideSection
           class="settings-section__subsection"
           heading="Оповещения о новых подборках"
