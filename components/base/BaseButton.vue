@@ -19,8 +19,8 @@ const props = defineProps({
     default: ''
   },
   mods: {
-    type: Array,
-    default: () => []
+    type: String,
+    default: ''
   },
   type: {
     type: String,
@@ -30,5 +30,5 @@ const props = defineProps({
 })
 
 const component = computed(() => props.to ? 'nuxt-link' : 'button')
-const classes = computed(() => props.mods.map((e) => `btn--${e}`))
+const classes = computed(() => props.mods.split(' ').map((e) => `btn--${e}`))
 </script>
