@@ -11,7 +11,8 @@
         :placeholder="placeholder"
         :disabled="disabled"
         :readonly="readonly"
-        :value="value"
+        v-bind:value="value"
+        v-on:input="$emit('input', $event.target.value)"
       />
       <div v-if="currency" class="extra-field__currency">
         {{ currency }}
