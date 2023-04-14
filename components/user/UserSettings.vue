@@ -102,7 +102,7 @@
               label="Email"
               :checked="settings.notifytype === '2'"
             />
-            <BaseInputEdit v-model="settings.email" />
+            <BaseInputEdit v-model="settings.email" @update="updateEmail" />
           </div>
           <div class="settings-section__field is-flex">
             <BaseRadio
@@ -203,6 +203,11 @@ const store = useStore()
 const { user } = store.state['user.store']
 
 const settings = reactive({ ...user })
+const updateEmail = () => {
+  store.dispatch('user.store/update', {
+    email: settings.email
+  })
+}
 </script>
 
 <style scoped>

@@ -1,5 +1,6 @@
 import cookie from 'cookie-universal'
 import { axiosService } from '~/services/axios.service'
+import axios from 'axios'
 
 export const state = {
   user: {},
@@ -32,6 +33,17 @@ export const actions = {
 
     commit('SET_USER', data)
   },
+
+  async update(_, input) {
+    const userId = cookie().get('user-id')
+    const { error } = await axiosService('put', `user/${userId}`, {
+      data: input
+    })
+
+    if (error) {
+      console.error(error)
+    }
+  }
 }
 
 export const mutations = {
