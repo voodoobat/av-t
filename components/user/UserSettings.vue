@@ -102,6 +102,7 @@
               label="Email"
               :checked="settings.notifytype === '2'"
             />
+            <BaseInputEdit v-model="settings.email" />
           </div>
           <div class="settings-section__field is-flex">
             <BaseRadio
@@ -173,14 +174,14 @@
             :options="['Москва', 'Рязань', 'Воронеж']"
           />
         </div>
-        <div class="settings-section__field is-with-tip">
+        <div class="settings-section__field is-flex is-gap">
           <BaseCheckbox
             label="Автоматически переходить к новым объявлениям"
             checked
           />
           <BaseInfoTooltip message="подсказка..." />
         </div>
-        <div class="settings-section__field is-with-tip">
+        <div class="settings-section__field is-flex is-gap">
           <BaseCheckbox
             label="Включить цвета в ленте"
             checked
@@ -205,9 +206,7 @@ const settings = reactive({ ...user })
 </script>
 
 <style scoped>
-.settings-section__field.is-with-tip {
-  display: flex;
-  align-items: center;
+.settings-section__field.is-gap {
   justify-content: space-between;
   gap: 2rem;
 }

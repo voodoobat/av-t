@@ -1,0 +1,30 @@
+.base-input-edit {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.base-input-edit__icon {
+  min-width: 1.6rem;
+  min-height: 1.6rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  color: #2dc574;
+  cursor: pointer;
+}
+
+.base-input-edit__input {
+  display: none;
+}
+
+.base-input-edit.is-active .base-input-edit__input {
+  display: block;
+}
+
+.base-input-edit.is-active .base-input-edit__value {
+  display: none;
+}
+
+.base-input-edit.is-active .base-input-edit__icon {
+  display: none;
+}
